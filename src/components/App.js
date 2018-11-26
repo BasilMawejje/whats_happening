@@ -12,8 +12,8 @@ class App extends Component {
         query: "sources=bbc-news"
       },
       news2: {
-        type: "top-headlines",
-        query: "country=us&category=business"
+        type: "everything",
+        query: "domains=wsj.com"
       },
       news3: {
         type: "top-headlines",
@@ -28,8 +28,8 @@ class App extends Component {
         query: "q=apple&from=2018-11-25&to=2018-11-25&sortBy=popularity"
       },
       news6: {
-        type: "everything",
-        query: "domains=wsj.com"
+        type: "top-headlines",
+        query: "country=us&category=business"
       }
     };
   }
