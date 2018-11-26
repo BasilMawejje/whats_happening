@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import News from "./News/News";
+import Sidenews from "./News/Sidenews";
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
         query: "sources=bbc-news"
       },
       news2: {
-        type: "everytop-headlinesthing",
+        type: "top-headlines",
         query: "country=us&category=business"
       },
       news3: {
@@ -25,21 +26,58 @@ class App extends Component {
       news5: {
         type: "everything",
         query: "q=apple&from=2018-11-25&to=2018-11-25&sortBy=popularity"
+      },
+      news6: {
+        type: "everything",
+        query: "domains=wsj.com"
       }
     };
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">What's Happening</h1>
-        </header>
-        <News news={this.state.news1} />
-        <News news={this.state.news2} />
-        <News news={this.state.news3} />
-        <News news={this.state.news4} />
-        <News news={this.state.news5} />
+      <div className="container-fluid">
+        <div className="navbar-fixed">
+          <nav>
+            <div className="nav-wrapper blue-grey darken-1">
+              <a href="/" className="brand-logo">
+                WhatsHappening
+              </a>
+              <ul className="right hide-on-med-and-down">
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div className="row">
+          <div className="col s8">
+            <h3>Top Headlines</h3>
+            <News news={this.state.news1} />
+            <hr />
+            <h3>Business</h3>
+            <News news={this.state.news2} />
+            <hr />
+            <h3>Trump</h3>
+            <News news={this.state.news3} />
+            <hr />
+            <h3>Bitcoin</h3>
+            <News news={this.state.news4} />
+            <hr />
+            <h3>Apple</h3>
+            <News news={this.state.news5} />
+            <hr />
+          </div>
+
+          <div className="col s4">
+            <Sidenews news={this.state.news6} />
+          </div>
+        </div>
       </div>
     );
   }
