@@ -56,7 +56,7 @@ class App extends Component {
         </div>
 
         <div className="row">
-          <div className="col s8">
+          <div className="col s12 m12 l9">
             <h3>Top Headlines</h3>
             <News news={this.state.news1} />
             <hr />
@@ -74,7 +74,7 @@ class App extends Component {
             <hr />
           </div>
 
-          <div className="col s4">
+          <div className="col s3">
             <Sidenews news={this.state.news6} />
           </div>
         </div>
