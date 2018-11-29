@@ -75,6 +75,7 @@ class App extends Component {
           </div>
 
           <div className="col s3">
+            <h3>Side News</h3>
             <Sidenews news={this.state.news6} />
           </div>
         </div>
