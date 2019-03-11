@@ -6,32 +6,7 @@ import Sidenews from "./News/Sidenews";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      news1: {
-        type: "top-headlines",
-        query: "sources=bbc-news"
-      },
-      news2: {
-        type: "everything",
-        query: "domains=wsj.com"
-      },
-      news3: {
-        type: "top-headlines",
-        query: "q=trump"
-      },
-      news4: {
-        type: "everything",
-        query: "q=bitcoin"
-      },
-      news5: {
-        type: "everything",
-        query: "q=apple&from=2018-11-25&to=2018-11-25&sortBy=popularity"
-      },
-      news6: {
-        type: "top-headlines",
-        query: "country=us&category=business"
-      }
-    };
+    this.state = {};
   }
 
   render() {
@@ -58,25 +33,13 @@ class App extends Component {
         <div className="row">
           <div className="col s12 m12 l9">
             <h3>Top Headlines</h3>
-            <News news={this.state.news1} />
-            <hr />
-            <h3>Business</h3>
-            <News news={this.state.news2} />
-            <hr />
-            <h3>Trump</h3>
-            <News news={this.state.news3} />
-            <hr />
-            <h3>Bitcoin</h3>
-            <News news={this.state.news4} />
-            <hr />
-            <h3>Apple</h3>
-            <News news={this.state.news5} />
+            <News news={this.state.news} />
             <hr />
           </div>
 
           <div className="col s3">
             <h3>Side News</h3>
-            <Sidenews news={this.state.news6} />
+            <Sidenews news={this.state.news} />
           </div>
         </div>
       </div>
